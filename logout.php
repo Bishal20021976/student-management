@@ -1,0 +1,11 @@
+<?php
+session_start();
+session_unset();
+$destroy=session_destroy();
+if($destroy){
+    header("Location: login.php?logout=true");
+}
+else{
+    header("Location: login.php?logout=false");
+}
+?>
